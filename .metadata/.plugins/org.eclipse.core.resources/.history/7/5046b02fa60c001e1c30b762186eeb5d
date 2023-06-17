@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package projects.dao;
+
+/**
+ * @author jamie
+ *
+ */
+public class DbConnection {
+
+}

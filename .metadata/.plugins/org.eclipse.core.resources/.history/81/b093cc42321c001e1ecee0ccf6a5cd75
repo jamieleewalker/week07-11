@@ -1,0 +1,100 @@
+/**
+ * 
+ */
+package projects;
+
+import java.math.BigDecimal;
+import java.util.List;
+import java.util.Objects;
+import java.util.Scanner;
+import projects.entity.Project;
+import projects.exception.DbException;
+import projects.service.projectService;
+
+/**
+ * 
+ *  @author jamie
+ *
+ */
+public class Projects {
+	private Scanner scanner = new Scanner(System.in);
+	private projectService projectService = new projectService();
+	
+	// @formatter:off
+	private List<String> operations = List.of(
+			"1) add a project"
+			);
+	// @formatter:on
+	
+	
+	/**
+	 * @param args
+	 */
+	
+	
+	public static void main(String[] args) {
+		new Projects().processUserSelections();
+	}
+	private void processUserSelections() {
+		boolean done = false;
+		
+		while(!done) {
+			try {
+				int selection = getUserselection();
+				
+				switch(selection) {
+				case -1:
+					done = exitMenu()
+					break;
+					
+				case 1:
+					createProject();
+					break;
+					
+				default:
+					System.out.println("\n" + selection + " is not a valid selection. Try again.");
+					break;
+				}
+			}
+			catch(Exception e) {
+				System.out.println("\nError: " + e + " Try again.");
+			}
+			
+		}
+		
+	}
+	private void createProject() {
+		
+	
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
